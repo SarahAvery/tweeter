@@ -1,0 +1,32 @@
+/* Nav */
+
+nav {
+  width: 100%;
+  background-color: rgba(133, 0, 113, 1);
+
+  color: #fff;
+  padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  z-index: 10;
+}
+
+.logo-font {
+  font-family: "Bungee", cursive;
+}
+
+.sub-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sub-title span {
+  width: 100%;
+}
+
+.fa-angle-double-down {
+  color: #fff;
+}
