@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- Eternal Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,7 +44,7 @@
       </div>
     </nav>
 
-    <header>
+    <header class="profile-header">
       <div class="avatar">
         <img src="/images/profile-hex.png" />
       </div>
@@ -56,6 +57,7 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <!-- form - new tweets -->
         <form action="/tweets/" method="POST">
           <div class="text-area">
             <label class="tweet-label" for="tweet-text"
@@ -76,17 +78,74 @@
             >
           </div>
         </form>
+        <!-- tweets -->
+        <section class="tweet-container">
+          <article>
+            <div class="padding-wrapper">
+              <header class="tweet-header">
+                <div>
+                  <img src="images/facial-mask.png" alt="" />
+                  <p>Karen McNameface</p>
+                </div>
+                <p class="handle">@person</p>
+              </header>
+              <div class="tweet-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <footer class="tweet-footer">
+                <p>10 days ago</p>
+                <div class="icons">
+                  <i class="fas fa-flag fa-xs"></i>
+                  <i class="fas fa-retweet fa-xs"></i>
+                  <i class="fas fa-heart fa-xs"></i>
+                </div>
+              </footer>
+            </div>
+          </article>
+          <article>
+            <div class="padding-wrapper">
+              <header class="tweet-header">
+                <div>
+                  <img src="images/hhholmes.png" alt="" />
+                  <p>Herman W. Mudgett</p>
+                </div>
+                <p class="handle">@hhholmes</p>
+              </header>
+              <div class="tweet-body">
+                <p>I love Nannie and Minnie...</p>
+              </div>
+              <footer class="tweet-footer">
+                <p>10 days ago</p>
+                <time
+                  class="timeago"
+                  datetime="2008-07-17T09:24:17Z"
+                  title="July 17, 2008"
+                ></time>
+                <div class="icons">
+                  <i class="fas fa-flag fa-xs"></i>
+                  <i class="fas fa-retweet fa-xs"></i>
+                  <i class="fas fa-heart fa-xs"></i>
+                </div>
+              </footer>
+            </div>
+          </article>
+        </section>
       </section>
     </main>
   </body>
 
   <!-- External JS -->
   <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"
   ></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->

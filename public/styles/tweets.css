@@ -1,0 +1,78 @@
+article {
+  margin: 15px 0;
+  border: 2px solid black;
+}
+
+article .padding-wrapper {
+  padding: 10px;
+}
+
+.tweet-footer,
+.tweet-header {
+  margin: 0 5px;
+}
+/* header */
+article .tweet-header {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+.tweet-header div {
+  display: flex;
+  margin: 8px 0;
+}
+
+.tweet-header div img {
+  height: 64px;
+  width: 60px;
+}
+
+.tweet-header p {
+  padding-left: 10px;
+}
+
+.handle {
+  color: rgba(133, 0, 113, 0.5);
+}
+/* tweet body */
+.tweet-body {
+  border-bottom: 2px solid black;
+  padding: 10px 0;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.tweet-body p {
+  margin: 0 8px;
+  padding: 8px 0;
+}
+/* footer */
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+  font-weight: bold;
+}
+
+.tweet-footer p {
+  font-size: 14px;
+}
+
+.tweet-footer .icons {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.tweet-footer .icons i {
+  margin: 0 5px;
+  color: rgba(133, 0, 113, 1);
+}
+
+.tweet-footer .icons i:hover {
+  /* color: #850071; */
+  color: rgba(209, 117, 191, 1);
+}
