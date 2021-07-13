@@ -1,6 +1,20 @@
+/* column */
+
+#column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
 article {
   margin: 15px 0;
   border: 2px solid black;
+  box-shadow: 0;
+  transition: box-shadow 100ms;
+}
+
+article:hover {
+  box-shadow: 8px 10px 10px rgba(113, 0, 113, 0.2);
 }
 
 article .padding-wrapper {
@@ -46,6 +60,7 @@ article .tweet-header {
 .tweet-body p {
   margin: 0 8px;
   padding: 8px 0;
+  word-wrap: break-word;
 }
 /* footer */
 
@@ -75,4 +90,18 @@ article .tweet-header {
 .tweet-footer .icons i:hover {
   /* color: #850071; */
   color: rgba(209, 117, 191, 1);
+}
+
+/* MEDIA QUERIES */
+
+/* Default is 1024px+ */
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Write Tablet only CSS here */
+}
+
+/* Another smartphone breakpoint is maximum width of around 420px */
+@media only screen and (max-width: 768px) {
+  /* Write smartphone only styles here */
 }

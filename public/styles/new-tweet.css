@@ -1,3 +1,22 @@
+/* Error Message */
+
+#error-msg {
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  float: left;
+  padding: 15px 40px;
+  z-index: 20;
+  position: absolute;
+  display: none;
+}
+
+#error-msg p {
+  color: #cc0033;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* Form */
+
 form {
   margin: 10px 0;
 }

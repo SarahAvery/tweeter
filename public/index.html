@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -50,12 +53,13 @@
       </div>
       <br />
       <div class="name">
-        <h2>Your Name</h2>
+        <h2>Georgie Porgie</h2>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="error-msg"><p></p></div>
         <h2>Compose Tweet</h2>
         <!-- form - new tweets -->
         <form action="/tweets" method="POST" id="form">
@@ -68,65 +72,65 @@
               class="tweet-text"
               id="tweet-text"
               maxlength="140"
+              minlength="1"
             ></textarea>
           </div>
           <div class="sub-and-counter logo-font">
             <button type="submit">Tweet</button>
 
             <output name="counter" class="counter" for="tweet-text">
-              <span class="charLeft">0</span>/140</output
+              <span class="charLeft">140</span>/140</output
             >
           </div>
         </form>
         <!-- tweets -->
         <section class="tweet-container">
-          <article>
-            <div class="padding-wrapper">
-              <header class="tweet-header">
-                <div>
-                  <img src="images/facial-mask.png" alt="" />
-                  <p>Karen McNameface</p>
+          <div id="column">
+            <article>
+              <div class="padding-wrapper">
+                <header class="tweet-header">
+                  <div>
+                    <img src="images/facial-mask.png" alt="" />
+                    <p>Karen McNameface</p>
+                  </div>
+                  <p class="handle">@karens</p>
+                </header>
+                <div class="tweet-body">
+                  <p>Really?</p>
                 </div>
-                <p class="handle">@person</p>
-              </header>
-              <div class="tweet-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <footer class="tweet-footer">
+                  <p>6 days ago</p>
+                  <div class="icons">
+                    <i class="fas fa-flag fa-xs"></i>
+                    <i class="fas fa-retweet fa-xs"></i>
+                    <i class="fas fa-heart fa-xs"></i>
+                  </div>
+                </footer>
               </div>
-              <footer class="tweet-footer">
-                <p>10 days ago</p>
-                <div class="icons">
-                  <i class="fas fa-flag fa-xs"></i>
-                  <i class="fas fa-retweet fa-xs"></i>
-                  <i class="fas fa-heart fa-xs"></i>
+            </article>
+            <article>
+              <div class="padding-wrapper">
+                <header class="tweet-header">
+                  <div>
+                    <img src="images/hhholmes.png" alt="" />
+                    <p>Herman W. Mudgett</p>
+                  </div>
+                  <p class="handle">@hhholmes</p>
+                </header>
+                <div class="tweet-body">
+                  <p>🖤 Minnie...</p>
                 </div>
-              </footer>
-            </div>
-          </article>
-          <article>
-            <div class="padding-wrapper">
-              <header class="tweet-header">
-                <div>
-                  <img src="images/hhholmes.png" alt="" />
-                  <p>Herman W. Mudgett</p>
-                </div>
-                <p class="handle">@hhholmes</p>
-              </header>
-              <div class="tweet-body">
-                <p>🖤 Minnie...</p>
+                <footer class="tweet-footer">
+                  <p>3 days ago</p>
+                  <div class="icons">
+                    <i class="fas fa-flag fa-xs"></i>
+                    <i class="fas fa-retweet fa-xs"></i>
+                    <i class="fas fa-heart fa-xs"></i>
+                  </div>
+                </footer>
               </div>
-              <footer class="tweet-footer">
-                <p>10 days ago</p>
-                <!-- <time class="timeago" datetime="2019-11-27T09:24:17Z"
-                  >November 27, 2019</time
-                > -->
-                <div class="icons">
-                  <i class="fas fa-flag fa-xs"></i>
-                  <i class="fas fa-retweet fa-xs"></i>
-                  <i class="fas fa-heart fa-xs"></i>
-                </div>
-              </footer>
-            </div>
-          </article>
+            </article>
+          </div>
         </section>
       </section>
     </main>
