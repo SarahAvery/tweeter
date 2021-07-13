@@ -9,8 +9,6 @@
     //
 
     const renderTweets = (tweets) => {
-      console.log(tweets.length);
-
       for (const tweet of tweets) {
         const $tweetCard = createTweetElement(tweet);
         $(".tweet-container").append($tweetCard);
@@ -72,6 +70,23 @@
         created_at: 1626041259205
       }
     ];
+
+    // submit event
+    $("#form").submit((e) => {
+      e.preventDefault();
+
+      const tweet = $("textarea").val();
+      const data = $(e.target).serialize();
+      // console.log(form.serialize());
+      // console.log($(this));
+      // console.log(tweet);
+      $.ajax({
+        url: e.target.action,
+        type: "POST",
+        data,
+        success: (response) => console.log(response)
+      });
+    });
 
     renderTweets(tweetDB);
   });
