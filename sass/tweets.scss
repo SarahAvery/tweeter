@@ -82,7 +82,7 @@ article {
         @include brant-text-color;
 
         &:hover {
-          @include hover-state;
+          color: rgba(209, 117, 191, 1);
         }
       }
     }

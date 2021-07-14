@@ -1,19 +1,19 @@
 @import "./mixin.scss";
 
-/* Error Message */
 #error-msg {
   background-color: #fce4e4;
   border: 1px solid #fcc2c3;
-  float: left;
-  padding: 15px 40px;
+  padding: 20px 40px;
   z-index: 20;
   position: absolute;
   display: none;
+  left: 5%;
 
   p {
     color: #cc0033;
     font-size: 16px;
     font-weight: bold;
+    margin: 0;
   }
 }
 
@@ -22,7 +22,9 @@
   padding: 0 10px;
 }
 
-/* Form */
+.new-tweet .charLeft.invalid {
+  color: red;
+}
 
 form {
   margin: 10px 0;
@@ -51,7 +53,7 @@ form {
     font-size: 18px;
     font-weight: bold;
     padding: 8px;
-    height: 40px;
+    height: auto;
   }
 
   .sub-and-counter {
@@ -71,18 +73,34 @@ form {
       border-radius: 4px;
 
       &:hover {
-        @include hover-state;
+        border: 2px solid rgba(209, 117, 191, 1);
       }
     }
   }
 }
 
 /* MEDIA QUERIES */
-
+@media only screen and (max-width: 768px) {
+  #error-msg {
+    margin-top: -70px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #error-msg {
+    left: unset;
+    right: 5%;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .new-tweet {
     margin: 0;
     padding: 0;
     margin-right: 30px;
+  }
+
+  #error-msg {
+    margin-top: -80px;
+    right: unset;
+    left: unset;
   }
 }

@@ -29,4 +29,14 @@ This app currently does not have a database - any mock tweets will be lost once 
 
 ## Screen Shots
 
-<!-- !["Desktop View"](https://github.com/SarahAvery/tweeter/blob/main/docs/desktop.png?raw=true) -->
+#### Desktop
+
+!["Desktop View"](https://github.com/SarahAvery/tweeter/blob/main/docs/desktop.png?raw=true)
+
+#### Tablet
+
+!["Tablet View"](https://github.com/SarahAvery/tweeter/blob/main/docs/tablet.png?raw=true)
+
+#### Mobile
+
+!["Mobile View"](https://github.com/SarahAvery/tweeter/blob/main/docs/mobile.png?raw=true)

@@ -1,15 +1,23 @@
 (function ($) {
   $(document).ready(function () {
-    // char counter
-    $("#form")
-      .find("#tweet-text")
-      .on("input", function () {
-        const maxLength = $(this).attr("maxLength");
-        const currLength = $(this).val().length;
-        const charsLeft = Number(maxLength - currLength);
+    const $form = $("#form");
 
-        $("#form").find(".charLeft").html(charsLeft);
-      });
+    // char counter
+    $form.find("#tweet-text").on("input", function () {
+      $("#error-msg").css("display", "none");
+      const maxLength = 140;
+      const currLength = $(this).val().length;
+      const charsLeft = Number(maxLength - currLength);
+
+      const $charLeft = $form.find(".charLeft");
+      $charLeft.html(charsLeft);
+
+      if (currLength > maxLength) {
+        $charLeft.addClass("invalid");
+      } else {
+        $charLeft.removeClass("invalid");
+      }
+    });
 
     const animateTopHandler = function () {
       $("html").animate({ scrollTop: 0 }, "slow");

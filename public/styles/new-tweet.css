@@ -1,17 +1,17 @@
-/* Error Message */
 #error-msg {
   background-color: #fce4e4;
   border: 1px solid #fcc2c3;
-  float: left;
-  padding: 15px 40px;
+  padding: 20px 40px;
   z-index: 20;
   position: absolute;
   display: none;
+  left: 5%;
 }
 #error-msg p {
   color: #cc0033;
   font-size: 16px;
   font-weight: bold;
+  margin: 0;
 }
 
 .new-tweet {
@@ -19,7 +19,10 @@
   padding: 0 10px;
 }
 
-/* Form */
+.new-tweet .charLeft.invalid {
+  color: red;
+}
+
 form {
   margin: 10px 0;
 }
@@ -44,7 +47,7 @@ form .tweet-text {
   font-size: 18px;
   font-weight: bold;
   padding: 8px;
-  height: 40px;
+  height: auto;
 }
 form .sub-and-counter {
   display: flex;
@@ -63,14 +66,31 @@ form .sub-and-counter button {
   border-radius: 4px;
 }
 form .sub-and-counter button:hover {
-  background-color: #d175bf;
+  border: 2px solid #d175bf;
 }
 
 /* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  #error-msg {
+    margin-top: -70px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #error-msg {
+    left: unset;
+    right: 5%;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .new-tweet {
     margin: 0;
     padding: 0;
     margin-right: 30px;
+  }
+
+  #error-msg {
+    margin-top: -80px;
+    right: unset;
+    left: unset;
   }
 }

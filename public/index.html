@@ -38,7 +38,6 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo-font">tweeter</span>
       <div class="sub-title">
@@ -58,12 +57,10 @@
         </div>
       </div>
     </header>
-    <!-- Page-specific (main) content here -->
     <main class="container">
+      <div id="error-msg"><p></p></div>
       <section class="new-tweet">
-        <div id="error-msg"><p></p></div>
         <h3>Compose Tweet</h3>
-        <!-- form - new tweets -->
         <form action="/tweets" method="POST" id="form">
           <div class="text-area">
             <label class="tweet-label" for="tweet-text"
@@ -73,8 +70,8 @@
               name="text"
               class="tweet-text"
               id="tweet-text"
-              maxlength="140"
               minlength="1"
+              rows="1"
             ></textarea>
           </div>
           <div class="sub-and-counter logo-font">
@@ -85,7 +82,6 @@
             >
           </div>
         </form>
-        <!-- tweets -->
         <section class="tweet-container">
           <div id="column">
             <article>
@@ -136,7 +132,6 @@
         </section>
       </section>
     </main>
-    <!-- scroll to top -->
     <button id="topBtn"><i class="fas fa-angle-double-up fa-lg"></i></button>
   </body>
 

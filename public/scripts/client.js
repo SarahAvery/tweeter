@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 // escape function to prevent cross-site scripting
 function escape(str) {
   let div = document.createElement("div");
@@ -58,6 +59,11 @@ function escape(str) {
 
       const tweetLength = $("textarea").val().length;
       if (tweetLength >= 1) {
+        if (tweetLength > 140) {
+          $("#error-msg").css("display", "block");
+          $("#error-msg p").html("You can not tweet more than 140 characters");
+          return false;
+        }
         const data = $(e.target).serialize();
 
         $.ajax({
