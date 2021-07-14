@@ -37,9 +37,41 @@ h5,
 h6 {
   margin: 0 auto;
 }
+/* scroll to top button */
+
+#topBtn {
+  visibility: hidden;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+  border: none;
+  outline: none;
+  background-color: rgba(133, 0, 113, 1);
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+#topBtn:hover {
+  background-color: rgba(209, 117, 191, 1);
+}
 
 main.container {
   width: 90%;
   margin: 0 auto;
   font-size: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+  main.container {
+    width: 60%;
+    margin-top: 200px;
+  }
 }

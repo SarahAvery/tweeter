@@ -76,3 +76,13 @@ button {
 button:hover {
   border: 2px solid rgba(209, 117, 191, 1);
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+  }
+}

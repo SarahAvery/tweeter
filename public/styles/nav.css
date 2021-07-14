@@ -31,3 +31,15 @@ nav {
 .fa-angle-double-down {
   color: #fff;
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    background-color: transparent;
+  }
+
+  body.scrolled nav {
+    background-color: rgba(133, 0, 113, 1);
+  }
+}

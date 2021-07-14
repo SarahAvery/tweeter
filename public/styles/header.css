@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: rgba(133, 0, 113, 0.5);
   background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
 }
 
@@ -13,4 +14,37 @@
   width: 100%;
   display: flex;
   justify-content: center;
+}
+h2 {
+  color: #fff;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .profile-header {
+    height: 470px;
+    margin-top: 0;
+    padding-top: 120px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .profile-header {
+    margin-top: 200px;
+    width: 40%;
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .desktop {
+    background-color: rgba(133, 0, 113, 0.5);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    width: 80%;
+    padding: 10px;
+  }
+
+  h2 {
+    text-align: center;
+  }
 }
