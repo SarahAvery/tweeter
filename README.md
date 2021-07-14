@@ -26,3 +26,7 @@ This app currently does not have a database - any mock tweets will be lost once 
 - md5
 - Nodemon
 - Sass
+
+## Screen Shots
+
+<!-- !["Desktop View"](https://github.com/SarahAvery/tweeter/blob/main/docs/desktop.png?raw=true) -->
