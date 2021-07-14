@@ -1,0 +1,88 @@
+@import "./mixin.scss";
+
+/* Error Message */
+#error-msg {
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  float: left;
+  padding: 15px 40px;
+  z-index: 20;
+  position: absolute;
+  display: none;
+
+  p {
+    color: #cc0033;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.new-tweet {
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+/* Form */
+
+form {
+  margin: 10px 0;
+
+  .text-area {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid black;
+  }
+
+  .tweet-label {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  textarea {
+    min-height: 24px;
+    background-color: #f4f1ec;
+  }
+
+  .tweet-text {
+    outline: none;
+    width: 100%;
+    margin-bottom: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    height: 40px;
+  }
+
+  .sub-and-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+
+    button {
+      @include brand-bg-color;
+      border: 2px solid rgba(133, 0, 113, 1);
+      color: #fff;
+      font-weight: 400;
+      outline: none;
+      padding: 4px;
+      font-size: 18px;
+      border-radius: 4px;
+
+      &:hover {
+        @include hover-state;
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+  }
+}

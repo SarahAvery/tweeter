@@ -1,6 +1,8 @@
+@import "./mixin.scss";
+
 nav {
   width: 100%;
-  background-color: #850071;
+  @include brand-bg-color;
   color: #fff;
   padding: 0 1.5em;
   display: flex;
@@ -10,26 +12,30 @@ nav {
   z-index: 10;
   top: 0;
   position: fixed;
-}
-nav .sub-title {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-nav .sub-title span {
-  width: 100%;
-}
-nav .fa-angle-double-down {
-  color: #fff;
+
+  .sub-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sub-title span {
+    width: 100%;
+  }
+
+  .fa-angle-double-down {
+    color: #fff;
+  }
 }
 
 /* MEDIA QUERIES */
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   nav {
     background-color: transparent;
   }
 
   body.scrolled nav {
-    background-color: #850071;
+    @include brand-bg-color;
   }
 }

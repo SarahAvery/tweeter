@@ -3,10 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+@import "./mixin.scss";
+
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -16,6 +18,7 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -30,7 +33,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 /* Reset */
+
 h1,
 h2,
 h3,
@@ -39,8 +44,8 @@ h5,
 h6 {
   margin: 0 auto;
 }
-
 /* scroll to top button */
+
 #topBtn {
   visibility: hidden;
   position: fixed;
@@ -49,7 +54,7 @@ h6 {
   z-index: 20;
   border: none;
   outline: none;
-  background-color: #850071;
+  @include brand-bg-color;
   color: white;
   cursor: pointer;
   padding: 15px 20px;
@@ -57,7 +62,7 @@ h6 {
 }
 
 #topBtn:hover {
-  background-color: #d175bf;
+  @include hover-state;
 }
 
 main.container {
@@ -67,11 +72,11 @@ main.container {
 }
 
 /* MEDIA QUERIES */
+
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
   }
-
   main.container {
     width: 60%;
     margin-top: 205px;

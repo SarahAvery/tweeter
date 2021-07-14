@@ -1,0 +1,92 @@
+@import "./mixin.scss";
+
+#column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+article {
+  margin: 15px 0;
+  border: 2px solid black;
+  box-shadow: 0;
+  transition: box-shadow 100ms;
+
+  &:hover {
+    box-shadow: 8px 10px 10px rgba(113, 0, 113, 0.2);
+  }
+
+  .padding-wrapper {
+    padding: 10px;
+  }
+
+  .tweet-footer,
+  .tweet-header {
+    margin: 0 5px;
+  }
+
+  .tweet-header {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+
+    div {
+      display: flex;
+      margin: 8px 0;
+
+      img {
+        height: 64px;
+        width: 60px;
+      }
+    }
+    p {
+      padding-left: 10px;
+    }
+  }
+
+  .handle {
+    color: rgba(133, 0, 113, 0.5);
+  }
+
+  .tweet-body {
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+    margin: 5px 0;
+    font-weight: bold;
+
+    p {
+      margin: 0 8px;
+      padding: 8px 0;
+      word-wrap: break-word;
+    }
+  }
+
+  .tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+    font-weight: bold;
+
+    p {
+      font-size: 14px;
+    }
+
+    .icons {
+      display: flex;
+      align-items: flex-start;
+      height: 100%;
+
+      i {
+        margin: 0 5px;
+        @include brant-text-color;
+
+        &:hover {
+          @include hover-state;
+        }
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES */

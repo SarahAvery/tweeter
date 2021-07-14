@@ -1,0 +1,14 @@
+@mixin brand-bg-color {
+  background-color: rgba(133, 0, 113, 1);
+}
+
+@mixin brant-text-color {
+  color: rgba(133, 0, 113, 1);
+}
+
+@mixin hover-state {
+  background-color: rgba(209, 117, 191, 1);
+}
+
+// Not enough to justify writing a mixin for display flex, justify & align
+// mixed matched too much

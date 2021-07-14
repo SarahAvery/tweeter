@@ -1,5 +1,4 @@
 /* Error Message */
-
 #error-msg {
   background-color: #fce4e4;
   border: 1px solid #fcc2c3;
@@ -9,16 +8,10 @@
   position: absolute;
   display: none;
 }
-
 #error-msg p {
   color: #cc0033;
   font-size: 16px;
   font-weight: bold;
-}
-/* Form */
-
-form {
-  margin: 10px 0;
 }
 
 .new-tweet {
@@ -26,45 +19,42 @@ form {
   padding: 0 10px;
 }
 
-div.text-area {
+/* Form */
+form {
+  margin: 10px 0;
+}
+form .text-area {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 2px solid black;
 }
-
-/* label */
-.tweet-label {
+form .tweet-label {
   width: 100%;
   padding: 8px 0;
 }
-
-/* textarea */
-textarea {
+form textarea {
   min-height: 24px;
   background-color: #f4f1ec;
 }
-
-.tweet-text {
+form .tweet-text {
   outline: none;
   width: 100%;
   margin-bottom: 5px;
   border: none;
   font-size: 18px;
-
   font-weight: bold;
+  padding: 8px;
+  height: 40px;
 }
-
-/* submit button and char counter */
-.sub-and-counter {
+form .sub-and-counter {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 0;
 }
-
-button {
-  background-color: rgba(133, 0, 113, 1);
-  border: 2px solid rgba(133, 0, 113, 1);
+form .sub-and-counter button {
+  background-color: #850071;
+  border: 2px solid #850071;
   color: #fff;
   font-weight: 400;
   outline: none;
@@ -72,13 +62,11 @@ button {
   font-size: 18px;
   border-radius: 4px;
 }
-
-button:hover {
-  border: 2px solid rgba(209, 117, 191, 1);
+form .sub-and-counter button:hover {
+  background-color: #d175bf;
 }
 
 /* MEDIA QUERIES */
-
 @media only screen and (min-width: 1024px) {
   .new-tweet {
     margin: 0;
