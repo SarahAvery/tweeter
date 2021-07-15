@@ -25,7 +25,6 @@ function escape(str) {
     // tweet article
     const createTweetElement = (tweetObj) => {
       const timepast = timeago.format(tweetObj.created_at);
-      // console.log(timepast);
       const $tweet = $(` <article>
       <div class="padding-wrapper">
         <header class="tweet-header">

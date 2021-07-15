@@ -48,7 +48,7 @@ article .tweet-body {
 article .tweet-body p {
   margin: 0 8px;
   padding: 8px 0;
-  word-wrap: break-word;
+  word-break: break-all;
 }
 article .tweet-footer {
   display: flex;
